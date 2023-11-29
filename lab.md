@@ -1,12 +1,10 @@
-# Übung 6: Navigation
+# Übung 7: Icons, Schriftarten und Bilder
 
-- Legen Sie in Ihrem Projekt `ElVegetarianoFurio` eine neue Seite `CategoryPage.xaml` im Ordner Menu an.
-- Legen Sie ein ViewModel `CategoryViewModel` mit den Eigenschaften  `Category` und `Dishes` an. Dishes ist eine ObservableCollection!
-- Legen Sie eine Methode zum Laden der Liste der Dishes über den DataService anhand der vorgegebenen Category an
-- Verbinden Sie View und ViewModel. 
-- Registrieren Sie View und ViewModel in der DependencyInjection und registrieren Sie eine Route für die CategoryPage
-- Erstellen Sie das Layout für die Seite `CategoryPage.xaml` analog zum Screenshot
-- Navigieren Sie beim Klick auf eine Kategorie der Startseite zur entsprechenden Kategorie auf der Kategorieseite
-- Bonus: Abstrahieren Sie die Navigationslogik der Shell in einen eigenen Service
-
+- Kopieren Sie die Bilder (alle JPG-Dateien) aus dem Ordner `Images` der Beispieldateien in den Ordner `Resources\Images` Ihres Projekts. Kopieren Sie nicht die Bilder aus den Unterordnern.
+- Kopieren Sie die Schriftarten (alle TTF- und OTF-Dateien) aus dem Ordner `Fonts` der Beispieldateien in den Ordner `Resources\Fonts` Ihres Projekts. 
+- Kopieren Sie die Datei `FaSolid.cs` aus dem Ordner `Fonts`der Beispieldateien in den Ordner `Core` Ihres Projekts. Passen Sie dabei den Namespace an.
+- Registrieren Sie die drei neuen Schriftarten in der Datei `MauiProgram.cs`
+- Ersetzen Sie in den Dateien `MainPage.xaml` und `CategoryPage.xaml` die roten Kästen durch die entsprechenden Bilder
+- Fügen Sie eine neue Grid-Zeile auf der Datei `MainPage.xaml` hinzu. Stellen Sie in dieser Zeile das Symbol `Utensils` der Schriftart FA-Solid dar. 
+- Bonus: Passen Sie das Menü in der Datei `AppShell.xaml` analog zum Screenshot an.
 ![Übung](lab.png)
