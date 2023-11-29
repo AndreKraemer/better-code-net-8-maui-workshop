@@ -1,17 +1,19 @@
-# Übung 2
+# Übung 3
 
-- Öffnen Sie die App **ElVegetarianoFurio** in Visual Studio.
-- Erstellen Sie einen neuen Ordner `Profile` im Projekt
-- Erstellen Sie im Ordner Profile eine neue ContentPage mit dem Namen `ProfilePage.xaml` und registrieren Sie sie wie folgt in der Shell
+- Installieren Sie das Paket `CommunityToolkit.Mvvm` in Ihrem Projekt
+- Erstellen Sie im Ordner `Profile` eine Klasse `ProfileViewModel.cs` mit den folgenden Eingeschaften. Nutzen Sie dazu die MVVM-Source-Generators: 
+  
+  - `FullName`
+  - `Street`
+  - `Zip`
+  - `City`
+  - `Phone`
 
-```xml
-    <ShellContent
-        Title="Profil"
-        ContentTemplate="{DataTemplate profile:ProfilePage}"
-        Route="ProfilePage" />
-```
-- Registrieren Sie den XAML-Namespace `profile` analog zum Namespace `local` in der Shell wie folgt: `xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile"`
-- Bauen Sie die Maske `ProfilePage.xaml` analog zum Screenshot `lab.png` auf
+- Erzeugen Sie das folgende Command (vorerst mit leerem Code)  
+  - `SaveCommand`
 
+- Verbinden Sie `ProfilePage` und `ProfileViewModel`.
+
+- Bonus, falls Sie früher fertig sind: Versuchen Sie beim öffnen der Seite für einige Sekunden eine Ladeanimation anzuzeigen, wie im Screenshot
 
 ![Profilseite](lab.png)
