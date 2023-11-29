@@ -1,4 +1,4 @@
-# DWX - Developer Week 2023 Workshop: Eine Cross-Plattform-App an einem Tag mit .NET MAUI entwickeln
+# betterCode() .NET 8.0 Workshop: `Eine Cross-Plattform-App an einem Tag mit .NET MAUI 8.0 entwickeln
 
 Dies ist das Repository für den **betterCode() .NET 8.0** Workshop `Eine Cross-Plattform-App an einem Tag mit .NET MAUI 8.0 entwickeln`.
 
