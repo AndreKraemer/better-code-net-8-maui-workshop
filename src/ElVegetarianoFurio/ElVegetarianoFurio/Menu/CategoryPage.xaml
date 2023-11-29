@@ -8,7 +8,7 @@
     <Grid RowDefinitions="auto, *">
         <Border StrokeShape="RoundRectangle 0 0 15 15" StrokeThickness="0">
             <Grid>
-                <BoxView HeightRequest="400" HorizontalOptions="Fill" BackgroundColor="Red"/>
+                <Image Source="{Binding Category.Id, StringFormat='category{0}.jpg'}" HeightRequest="400" Aspect="AspectFill"/>
                 <VerticalStackLayout Padding="10" VerticalOptions="End" BackgroundColor="Black" Opacity="0.7">
                     <Label Text="{Binding Category.Name}" TextColor="White"/>
                     <Label Text="{Binding Category.Description}" FontAttributes="Italic" TextColor="White"/>
@@ -19,7 +19,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="vm:Dish">
                     <Grid Padding="10" RowDefinitions="auto,auto" ColumnDefinitions="60, *, auto" RowSpacing="6" ColumnSpacing="6">
-                        <Rectangle HeightRequest="60" WidthRequest="60" Fill="Red" Grid.RowSpan="2" />
+                        <Image Source="{Binding Id, StringFormat='dish{0}.jpg'}" HeightRequest="60" Aspect="AspectFill" Grid.RowSpan="2" />
                         <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold"/>
                         <Label Grid.Column="2" Text="{Binding Price, StringFormat='{0:C}'}"/>
                         <Label Grid.Column="1" Grid.Row="1" Text="{Binding Description}" FontAttributes="Italic"/>

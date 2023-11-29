@@ -3,19 +3,37 @@
     x:Class="ElVegetarianoFurio.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:core="clr-namespace:ElVegetarianoFurio.Core"
     xmlns:local="clr-namespace:ElVegetarianoFurio"
     xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile"
-    Shell.FlyoutBehavior="Flyout"
-    Title="ElVegetarianoFurio">
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <VerticalStackLayout Padding="30" BackgroundColor="DarkRed">
+                <Label FontSize="Large"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   FontFamily="Sofia">
+                    El Vegetariano Furio
+                </Label>
+            </VerticalStackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent Title="Start" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" 
+                Glyph="{x:Static core:FaSolid.Home}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
 
-    <ShellContent
-        Title="Profil"
-        ContentTemplate="{DataTemplate profile:ProfilePage}"
-        Route="ProfilePage"/>
-
+    <ShellContent Title="Profil"
+        ContentTemplate="{DataTemplate profile:ProfilePage}" Route="ProfilePage" >
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid"
+                    Glyph="{x:Static core:FaSolid.UserCircle}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
 </Shell>

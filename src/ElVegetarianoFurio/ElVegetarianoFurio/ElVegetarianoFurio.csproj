@@ -57,6 +57,40 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
+	  <None Remove="Resources\Fonts\ShadowsIntoLight-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Sofia-Regular.ttf" />
+	  <None Remove="Resources\Images\category1.jpg" />
+	  <None Remove="Resources\Images\category2.jpg" />
+	  <None Remove="Resources\Images\category3.jpg" />
+	  <None Remove="Resources\Images\category4.jpg" />
+	  <None Remove="Resources\Images\category5.jpg" />
+	  <None Remove="Resources\Images\category6.jpg" />
+	  <None Remove="Resources\Images\dish1.jpg" />
+	  <None Remove="Resources\Images\dish10.jpg" />
+	  <None Remove="Resources\Images\dish11.jpg" />
+	  <None Remove="Resources\Images\dish12.jpg" />
+	  <None Remove="Resources\Images\dish13.jpg" />
+	  <None Remove="Resources\Images\dish14.jpg" />
+	  <None Remove="Resources\Images\dish15.jpg" />
+	  <None Remove="Resources\Images\dish16.jpg" />
+	  <None Remove="Resources\Images\dish17.jpg" />
+	  <None Remove="Resources\Images\dish18.jpg" />
+	  <None Remove="Resources\Images\dish19.jpg" />
+	  <None Remove="Resources\Images\dish2.jpg" />
+	  <None Remove="Resources\Images\dish20.jpg" />
+	  <None Remove="Resources\Images\dish21.jpg" />
+	  <None Remove="Resources\Images\dish22.jpg" />
+	  <None Remove="Resources\Images\dish3.jpg" />
+	  <None Remove="Resources\Images\dish4.jpg" />
+	  <None Remove="Resources\Images\dish5.jpg" />
+	  <None Remove="Resources\Images\dish6.jpg" />
+	  <None Remove="Resources\Images\dish7.jpg" />
+	  <None Remove="Resources\Images\dish8.jpg" />
+	  <None Remove="Resources\Images\dish9.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
