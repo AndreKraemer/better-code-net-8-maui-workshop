@@ -11,8 +11,14 @@ namespace ElVegetarianoFurio.Profile
     [INotifyPropertyChanged]
     public partial class ProfileViewModel
     {
-        [NotifyCanExecuteChangedFor(nameof(SaveCommand))]
+        private readonly IProfileService _profileService;
+        public ProfileViewModel(IProfileService profileService)
+        {
+            _profileService = profileService;
+        }
+
         [ObservableProperty]
+        [NotifyCanExecuteChangedFor(nameof(SaveCommand))]
         private string _fullName = string.Empty;
 
         [ObservableProperty]
@@ -31,27 +37,52 @@ namespace ElVegetarianoFurio.Profile
         [ObservableProperty]
         private bool _isBusy = false;
 
-
         public async Task Initialize()
         {
-            IsBusy = true;
-            await Task.Delay(3000);
-            IsBusy = false;
+            try
+            {
+                IsBusy = true;
+                var profile = await _profileService.GetAsync();
+                FullName = profile.FullName;
+                Street = profile.Street;
+                Zip = profile.Zip;
+                City = profile.City;
+                Phone = profile.Phone;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
         }
 
 
         [RelayCommand(CanExecute = nameof(CanSave))]
         private async Task Save()
         {
-            IsBusy = true;
-            await Task.Delay(3000); // Simulieren eines Speichervorgangs
-            IsBusy = false;
+            try
+            {
+                IsBusy = true;
+                var profile = new Profile
+                {
+                    FullName = FullName,
+                    Street = Street,
+                    Zip = Zip,
+                    City = City,
+                    Phone = Phone
+                };
+                await _profileService.SaveAsync(profile);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
 
         private bool CanSave()
         {
-            return !IsBusy 
+            return !IsBusy
                 && !string.IsNullOrEmpty(FullName);
         }
     }
