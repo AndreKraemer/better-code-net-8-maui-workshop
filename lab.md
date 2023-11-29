@@ -1,9 +1,17 @@
-# Übung 1: Neue App
+# Übung 2
 
-*ca. 15 Minuten*
+- Öffnen Sie die App **ElVegetarianoFurio** in Visual Studio.
+- Erstellen Sie einen neuen Ordner `Profile` im Projekt
+- Erstellen Sie im Ordner Profile eine neue ContentPage mit dem Namen `ProfilePage.xaml` und registrieren Sie sie wie folgt in der Shell
 
-- Legen Sie eine neue App mit dem Namen  `ElVegetarianoFurio` an.
-- Starten Sie die App unter Windows.
-- Starten Sie die App im Android-Emulator
-- Testen Sie die XAML-Hot-Reload-Funktionalität
-- Testen Sie die .NET-Hot-Reload-Funktionalität
+```xml
+    <ShellContent
+        Title="Profil"
+        ContentTemplate="{DataTemplate profile:ProfilePage}"
+        Route="ProfilePage" />
+```
+- Registrieren Sie den XAML-Namespace `profile` analog zum Namespace `local` in der Shell wie folgt: `xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile"`
+- Bauen Sie die Maske `ProfilePage.xaml` analog zum Screenshot `lab.png` auf
+
+
+![Profilseite](lab.png)
