@@ -20,6 +20,14 @@
                                 <Label Text="{Binding Name}" TextColor="White"/>
                                 <Label Text="{Binding Description}" FontAttributes="Italic" TextColor="White"/>
                             </VerticalStackLayout>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource
+                                    AncestorType={x:Type vm:MainViewModel}},
+                                    Path=NavigateToCategoryCommand}"
+                                    CommandParameter="{Binding}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
                         </Grid>
                     </Border>
                 </DataTemplate>
