@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using ElVegetarianoFurio.Profile;
+using ElVegetarianoFurio.Data;
 
 namespace ElVegetarianoFurio
 {
@@ -22,6 +23,9 @@ namespace ElVegetarianoFurio
 
             builder.Services.AddSingleton<IProfileService, ProfileService>();
             builder.Services.AddTransient<ProfilePage, ProfileViewModel>();
+
+            builder.Services.AddSingleton<IDataService, DummyDataService>();
+            builder.Services.AddTransient<MainPage, MainViewModel>();
 
             return builder.Build();
         }
